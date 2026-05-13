@@ -5,11 +5,11 @@ import { useRef } from "react"
 import Link from "next/link"
 import { Navbar } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { Check, ArrowRight, Globe, Layers, Zap, Shield, Star } from "lucide-react"
+import { Check, Globe, Layers, Zap, Shield, Star } from "lucide-react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as any } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 }
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } }
 

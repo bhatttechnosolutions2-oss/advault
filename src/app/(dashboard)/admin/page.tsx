@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion"
 import {
-  DollarSign, Users, Activity, Wallet, TrendingUp,
-  ArrowUpRight, ArrowDownRight, Package, TicketIcon, AlertTriangle
+  DollarSign, Users, Wallet,
+  ArrowUpRight, Package, AlertTriangle
 } from "lucide-react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as any } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
 }
 
 const stats = [

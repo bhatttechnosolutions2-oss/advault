@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion"
 import {
-  Wallet, CreditCard, ArrowUpRight, ArrowDownRight, Activity,
+  Wallet, CreditCard, ArrowUpRight, ArrowDownRight,
   TrendingUp, Package, Clock, Plus
 } from "lucide-react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as any } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
 }
 
 const stats = [

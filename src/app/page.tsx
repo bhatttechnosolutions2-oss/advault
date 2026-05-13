@@ -7,25 +7,20 @@ import { Navbar } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import {
   ArrowRight, ArrowUpRight, Check, ChevronRight,
-  Zap, ShieldCheck, BarChart3, Globe, Megaphone,
-  Search, Palette, MessageSquare, Users, TrendingUp,
-  Star, Play, Layers, Target, Monitor, Code,
-  Smartphone, Headphones, Shield, Clock, Award
+  Zap, ShieldCheck, Globe, Megaphone,
+  Search, Palette, MessageSquare, TrendingUp,
+  Star, Layers, Monitor, Code,
+  Headphones, Shield, Clock, Award
 } from "lucide-react"
 
 /* ─── Animations ─── */
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as any } },
-}
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.6 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 }
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } }
 const scaleIn = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" as any } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" as const } },
 }
 
 function Section({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -115,7 +110,7 @@ export default function HomePage() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" as any }}
+              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" as const }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
             >
               Reliable Advertising<br />
@@ -176,7 +171,7 @@ export default function HomePage() {
         <Section className="py-16 sm:py-20 border-y border-white/[0.06] bg-white/[0.01]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-              {stats.map((stat, i) => (
+              {stats.map((stat) => (
                 <motion.div
                   key={stat.label}
                   variants={fadeUp}
@@ -208,7 +203,7 @@ export default function HomePage() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {infraServices.map((service, i) => (
+              {infraServices.map((service) => (
                 <motion.div
                   key={service.title}
                   variants={fadeUp}
@@ -245,7 +240,7 @@ export default function HomePage() {
             </motion.div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {agencyServices.map((service, i) => (
+              {agencyServices.map((service) => (
                 <motion.div
                   key={service.title}
                   variants={scaleIn}
@@ -356,7 +351,7 @@ export default function HomePage() {
                 { name: "Rahul Sharma", role: "CEO, ScaleMedia", text: "AdVault completely transformed how we manage our Google Ads infrastructure. The instant recharges alone save us hours every week." },
                 { name: "Priya Nair", role: "Founder, GrowthHub", text: "Best Meta BMs in the market. Clean history, no issues. Their support team is incredibly responsive — feels like having an in-house team." },
                 { name: "Alex Chen", role: "Performance Director, AdScale", text: "We moved our entire agency infrastructure to AdVault. The dashboard is beautiful, and the pricing is unbeatable for the quality." },
-              ].map((testimonial, i) => (
+              ].map((testimonial) => (
                 <motion.div
                   key={testimonial.name}
                   variants={fadeUp}

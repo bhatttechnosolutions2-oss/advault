@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Phone, ChevronRight } from "lucide-react"
@@ -29,7 +30,7 @@ export function Navbar() {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" as any }}
+        transition={{ duration: 0.6, ease: "easeOut" as const }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-black/80 backdrop-blur-xl border-b border-white/[0.06] shadow-2xl shadow-black/50"
@@ -40,7 +41,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <img src="/logo.png" alt="AdVault Logo" className="h-8 w-auto" />
+              <Image src="/logo.png" alt="AdVault Logo" width={120} height={32} className="h-8 w-auto" />
             </Link>
 
             {/* Desktop Nav */}

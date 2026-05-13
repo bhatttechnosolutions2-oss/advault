@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { supabase } from "@/lib/supabase"
 import { ArrowRight, Eye, EyeOff, CheckCircle } from "lucide-react"
 
@@ -65,7 +66,7 @@ export default function SignupPage() {
         <div className="absolute inset-0 dot-pattern opacity-20" />
         <div className="relative z-10 p-12 max-w-md">
           <Link href="/" className="flex items-center gap-2 mb-12">
-            <img src="/logo.png" alt="AdVault Logo" className="h-10 w-auto" />
+            <Image src="/logo.png" alt="AdVault Logo" width={150} height={40} className="h-10 w-auto" />
           </Link>
           <h2 className="text-3xl font-bold tracking-tight mb-4">
             Start Scaling <span className="gradient-text-accent">Today</span>
@@ -86,7 +87,7 @@ export default function SignupPage() {
         <div className="w-full max-w-md">
           <div className="lg:hidden mb-8">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <img src="/logo.png" alt="AdVault Logo" className="h-8 w-auto" />
+              <Image src="/logo.png" alt="AdVault Logo" width={120} height={32} className="h-8 w-auto" />
             </Link>
           </div>
 

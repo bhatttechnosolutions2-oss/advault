@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import {
   LayoutDashboard, ShoppingCart, Wallet, TicketIcon, Settings, LogOut,
@@ -38,7 +39,7 @@ export function Sidebar({ role }: { role: "client" | "admin" }) {
       {/* Logo */}
       <div className="flex h-16 lg:h-20 items-center border-b border-white/[0.06] px-6">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="AdVault Logo" className="h-7 w-auto" />
+          <Image src="/logo.png" alt="AdVault Logo" width={105} height={28} className="h-7 w-auto" />
           {role === "admin" && (
             <span className="ml-1 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-400 rounded">
               Admin
